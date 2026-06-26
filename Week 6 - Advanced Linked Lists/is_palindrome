@@ -1,0 +1,32 @@
+class Node:
+   def __init__(self, value, next=None):
+       self.value = value
+       self.next = next
+
+def is_palindrome(head):
+    slow = head
+    fast = head
+
+    while fast and fast.next: # whenever we stop, slow should be at middle
+        slow = slow.next
+        fast = fast.next.next
+    
+
+
+     
+def reverse(head):
+    prev = None
+    current = head
+
+    while current is not None:
+        nxt = current.next
+        current.next = prev
+        
+     
+
+# 1 2 3 4 5 6
+# Input List:
+# 1 -> 2 -> 1
+# Input: head = 1
+
+# True

@@ -9,7 +9,7 @@ def count_element(head, val):
 	while current is not None:
 		if current.value == val:
 			counter += 1
-		current = current.next
+		current = current.next # make sure this it out of block so it goes to the next node 
 	return counter
 
 

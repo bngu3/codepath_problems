@@ -1,0 +1,38 @@
+def valid_palindrome(s):
+    left = 0
+    right = len(s) - 1
+
+
+    while left < right:
+        if s[left] != s[right]:
+            skip_left_l = left + 1
+            skip_right_l = right 
+
+            while skip_left_l < skip_right_l and s[skip_left_l] == s[skip_right_l]:
+                skip_left_l += 1
+                skip_right_l -= 1
+
+            skip_left_r = left
+            skip_right_r = right - 1
+
+            while skip_left_r < skip_right_r and s[skip_left_r] == s[skip_right_r]:
+                    skip_left_r += 1
+                    skip_right_r -= 1
+
+            return skip_left_l >= skip_right_l or skip_left_r >= skip_right_r
+        else:
+            left += 1
+            right -= 1
+    return True
+
+
+
+
+s = "aba"
+s2 = "abca"
+s3 = "abc"
+
+print(valid_palindrome(s))
+print(valid_palindrome(s2))
+print(valid_palindrome(s3))
+

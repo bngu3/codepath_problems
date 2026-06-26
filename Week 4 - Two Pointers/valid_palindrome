@@ -26,8 +26,6 @@ def valid_palindrome(s):
     return True
 
 
-
-
 s = "aba"
 s2 = "abca"
 s3 = "abc"
